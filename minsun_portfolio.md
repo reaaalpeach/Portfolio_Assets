@@ -54,8 +54,8 @@
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/b81fe47f-739d-4c25-977c-e8ad123d71a8" width="20%" alt="Bingo">
-  <img src="https://github.com/user-attachments/assets/e3c224e0-ba80-4e0d-968b-149e660786eb" width="20%" alt="Bingo Mission">
   <img src="https://github.com/user-attachments/assets/6e088cdf-e081-4584-b003-817c277f46e8" width="20%" alt="Bingo Line Clear">
+  <img src="https://github.com/user-attachments/assets/e3c224e0-ba80-4e0d-968b-149e660786eb" width="20%" alt="Bingo Mission">
 </p>
 
 ### 3️⃣ 미니게임 2종 (Mini Games)
