@@ -1,18 +1,21 @@
-# [Project] NCT ZONE - Content & System Client Develop
+# 📂 Project Portfolio | Client Develop
+> **Unity 클라이언트 개발자 [김민선]입니다.**
+
+## 📋 Table of Contents
+1. [NCT ZONE - 콘텐츠 및 시스템 개발](#-project-1-nct-zone)
+2. [Project V](#-project-2-project-v)
+
+## 🎮 Project 1: NCT ZONE
 > **NCT 멤버들과 함께하는 시네마틱 어드벤처 게임의 핵심 시스템 개발 및 라이브 서비스 개발/유지 보수**
 
----
-
-## 📌 Project Overview
+### 📌 Project Overview
 - **개발 기간:** 2022.11 ~ 2026.02
 - **기술 스택:** Unity 3D, C#, UGUI
 - **담당 역할:** 클라이언트 컨텐츠 로직 구현 (스테이지, 시스템, 미니게임, 덱, 빙고게임)
 
----
+### ✨ Key Implementation
 
-## 🎮 Key Implementation
-
-### 1️⃣ 스테이지 & 챕터 시스템 (Stage & Chapter)
+#### 1️⃣ 스테이지 & 챕터 시스템 (Stage & Chapter)
 다양한 게임 모드(Normal, Hard, Event)에 대응하기 위해 확장성 있는 데이터 구조를 설계하고 관리 시스템을 구현했습니다.
 - **주요 구현:** 
     - 챕터 간 이동 및 해금 조건 체크 시스템 구현
@@ -21,7 +24,7 @@
     - 추상화 기반 설계: 각 모드가 동일한 인터페이스를 공유하되, 보상 산정 및 난이도 계산 로직은 각 모드에 맞게 동작하도록 설계.
 
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/6006a790-1e9b-4d6b-b1ee-1a1308b93348" width="20%" alt="Stage System Screenshot1">
+  <img src="https://github.com/user-attachments/assets/6006a790-1e9b-4d6b-b1ee-1a1308b93348" width="20%" alt="Stage System">
   <img src="https://github.com/user-attachments/assets/71e51b5b-0d2b-477a-abeb-23ee61b53412" width="20%" alt="Worldmap">
   <img src="https://github.com/user-attachments/assets/484f0407-ebd6-4300-84f3-f0b2626e0b33" width="20%" alt="Stage Enter Popup">
 </p>
@@ -31,7 +34,7 @@
 - 기존 시스템에서 하드 모드와 이벤트 스테이지가 추가됨에 따라 데이터 구조가 복잡해지는 문제가 발생.
 이를 해결하기 위해 각 모드를 Data Layer에서 분리하고, partial 키워드를 통해 class를 나누고 데이터 오염 방지와 유지보수 편의성을 동시에 확보.
 
-### 2️⃣ 덱 저장 시스템 (Deck Management)
+#### 2️⃣ 덱 저장 시스템 (Deck Management)
 유저가 스테이지 공략을 위해 설정한 최적의 카드 조합을 로컬 및 서버에 저장하고 불러오는 기능을 구현했습니다.
 - **주요 구현:**
     - 다중 덱 슬롯 관리 로직
@@ -45,7 +48,7 @@
 - **Troubleshooting:** 기존 시스템에서 타입별로 덱을 구성하게됨에 따라 데이터 구조가 복잡해지는 문제가 발생.
 이를 해결하기 위해 상속을 통해 공통 로직은 재사용하되 타입별 특수 로직은 개별적으로 처리하도록 구현하여 데이터 오염 방지 및 유지 보수 편의성을 동시에 확보.
 
-### 3️⃣ 빙고 이벤트 시스템 (Bingo System)
+#### 3️⃣ 빙고 이벤트 시스템 (Bingo System)
 미션 수행과 재화 소모를 결합하여 유저의 리텐션을 유도하는 이벤트 시스템을 개발했습니다.
 - **주요 구현:**
     - **이원화 도장 시스템:** 미션 보상(일반 도장)과 유료 재화(스페셜 도장) 사용 로직 구현
@@ -58,10 +61,10 @@
   <img src="https://github.com/user-attachments/assets/e3c224e0-ba80-4e0d-968b-149e660786eb" width="20%" alt="Bingo Mission">
 </p>
 
-### 3️⃣ 미니게임 2종 (Mini Games)
+#### 3️⃣ 미니게임 2종 (Mini Games)
 게임 내 체류 시간을 높이기 위한 캐주얼 미니게임의 핵심 메카닉을 개발했습니다.
 
-#### 🏎️ 레이싱 미니게임
+##### 🏎️ 레이싱 미니게임
 - 물리 기반의 차량 컨트롤러 구현
 - 무한 맵 생성을 위한 오브젝트 풀링(Object Pooling) 적용
 
@@ -72,7 +75,7 @@
 
 - **Troubleshooting:** 다양한 아이템 연출이 겹칠 때 프레임 드랍이 발생하는 문제를 방지하기 위해, 이펙트 오브젝트에도 오브젝트 풀링을 적용하여 안정적인 성능을 유지.
 
-#### 🍉 수박게임 (Merge Mechanic)
+##### 🍉 수박게임 (Merge Mechanic)
 - 오브젝트 풀링을 이용한 게임 최적화
 - 원형 물리 충돌 판정을 이용한 오브젝트 합성 로직
 - 상단 투하 위치 가이드 및 스코어 시스템
@@ -83,7 +86,7 @@
   <img src="https://github.com/user-attachments/assets/a8f720b0-78f1-48f0-a938-a6ddbb768732" width="20%" alt="Watermelon Select Item">
 </p>
 
-#### 미니게임 공통 적용 사항
+##### 미니게임 공통 적용 사항
 - 아이템 시스템 : 각기 다른 효과(턴 추가, 통흔들기, 지정해서 없애기 등)를 가진 아이템을 고유 트리거 시스템을 통해 사용 즉시 연동되는 특수 효과 및 로직을 구현하고, 게임의 템포를 조절하는 다양한 변수 창출.
 - 랭킹 시스템 : 전체 유저 대상의 '글로벌 랭킹'과 소셜 연동 정보를 활용한 '친구 랭킹' 데이터 분리 및 UI 대응.
 
@@ -93,7 +96,7 @@
 
 - **Troubleshooting:** 다양한 아이템 연출이 겹칠 때 프레임 드랍이 발생하는 문제를 방지하기 위해, 이펙트 오브젝트에도 오브젝트 풀링을 적용하여 안정적인 성능을 유지.
 
-### 4️⃣ 프로필 및 프레임 시스템 (Profile & Frame System)
+#### 4️⃣ 프로필 및 프레임 시스템 (Profile & Frame System)
 유저의 개성을 표현하는 프로필 사진과 프레임 선택 시스템을 구축하고, 획득 조건에 따른 활성화 로직을 구현했습니다.
 - **주요 구현:**
     - 수백 종류의 프로필 리소스를 시트 데이터와 연동하여 코드 수정 없이 리소스를 추가/관리할 수 있는 구조 설계.
@@ -791,6 +794,77 @@
 - **데이터 설계 능력 향상:** Normal/Hard/Event 등 복잡한 라이브 서비스 환경에서 데이터 간섭 없이 안정적으로 확장 가능한 시스템 설계 역량을 쌓았습니다.
 - **최적화 및 UX 고려:** 대량의 랭킹 데이터 처리 및 오브젝트 풀링을 활용한 미니게임 구현을 통해 성능 최적화와 유저 피드백(연출)의 중요성을 체득했습니다.
 - **협업 중심 개발:** 기획 의도에 유연하게 대응할 수 있도록 추상화와 인터페이스 중심의 코드를 작성하여 유지보수 효율을 높였습니다.
+
+---
+## 🎮 Project 2: Project V 
+> **몰입감 있는 스토리 안에서 캐릭터를 수집하고, 생성형 AI로 세계가 확장되는 하이브리드 게임의 핵심 시스템 개발**
+    
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/b14ec014-eeda-4263-9d3b-d00410f524ed" width="20%" alt="PJV Start">
+  <img src="https://github.com/user-attachments/assets/a69c446b-6528-4087-854e-9cf24aa575d7" width="20%" alt="PJV Main">
+</p>
+
+## 📌 Project Overview
+- **개발 기간:** 2025.10 ~ 2026.02
+- **기술 스택:** Unity 3D, C#, UGUI
+- **담당 역할:** 클라이언트 컨텐츠 로직 구현 (SNS)
+    
+### ✨ Key Implementation
+
+### Mobile SNS System (Instagram Clone)
+> **사용자 간 피드 공유 및 실시간 상호작용이 가능한 모바일 SNS 플랫폼 구현**
+    
+#### 1️⃣ 피드 업로드 및 실시간 댓글 시스템 (Feed & Comment) 📤
+유저가 직접 미디어를 공유하고 의견을 나눌 수 있는 커뮤니티 핵심 기능을 구현
+
+- **미디어 업로드 로직:** 테이블 데이터 기반하여 이미지를 로드하고 이미지 선택과 함께 글을 작성하여 서버 전송 적용
+- **실시간 댓글 동기화:** 댓글 작성 시 리스트 자동 갱신 및 레이아웃 동적으로 높이 조절(Dynamic Layout) 처리
+- **낙관적 업데이트 (Optimistic UI):** 좋아요 및 댓글 등록 시 서버 응답 전 UI를 즉시 반영하여 사용자 체감 속도 극대화
+    
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/f91e191f-89fe-471f-aeee-d81b78cc6921" width="20%" alt="Feed Main">
+  <img src="https://github.com/user-attachments/assets/5cace5de-6352-4547-a5c2-59b6af57eb59" width="20%" alt="Feed Replying">
+  <img src="https://github.com/user-attachments/assets/e21cca3f-3b8f-462a-925d-d07d64c1078e" width="20%" alt="Feed Upload">
+</p>
+    
+#### 2️⃣ 실시간 소셜 상호작용 (Social Interaction) ❤️
+좋아요, 댓글 등 유저 간 실시간 인터랙션을 위한 반응형 UI 시스템을 개발
+
+- **낙관적 업데이트 (Optimistic UI):** 서버 응답 대기 없이 유저 액션에 즉각 반응하는 UI 로직을 적용하여 체감 속도 향상
+- **이벤트 버스(Event Bus):** 게시물의 상태 변경(좋아요 수 등)이 여러 UI 뷰에 동시 반영되도록 옵저버 패턴 적용
+    
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/a3ae732c-a8c6-4108-b21a-d217ff8141c1" width="20%" alt="Feed Like">
+  <img src="https://github.com/user-attachments/assets/31d89a78-2bd0-4b56-87a3-7e95dc694450" width="20%" alt="Story Like">
+</p>
+
+#### 3️⃣ 스토리 시스템 (Story System) ⏱️
+24시간 동안 유지되는 휘발성 콘텐츠를 위한 별도의 뷰어와 업로드 로직을 구현
+
+- **스토리 전용 뷰어:** 상단 프로그레스 바(Progress Bar) 연동 및 자동 넘김, 탭 이동 기능 구현
+- **필터링 로직:** 서버 시간을 기준으로 24시간 이내의 유효한 데이터만 필터링하여 노출하는 클라이언트 로직 설계
+    
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/3740c587-d807-4d86-81e0-c935877a883d" width="20%" alt="Story">
+  <img src="https://github.com/user-attachments/assets/079fd7be-f06e-4436-b941-445566ce8b77" width="20%" alt="DM">
+</p>
+
+#### 4️⃣ 실시간 DM 시스템 (Direct Message) 💬
+유저 간 1:1 채팅을 위한 메시지 송수신 시스템을 구축\
+
+- **실시간 통신:** Socket 또는 Firebase Realtime Database를 활용한 저지연 메시지 송수신 구현
+- **채팅 UI 최적화:** 가변형 말풍선 리스트 구현
+- **상태 표시:** 메시지 읽음 처리(Read Receipt) 및 실시간 글쓰기 상태 표시 로직 연동
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/d374e585-153a-4022-8083-3832dace2e4a" width="20%" alt="DM List">
+  <img src="https://github.com/user-attachments/assets/079fd7be-f06e-4436-b941-445566ce8b77" width="20%" alt="DM">
+</p>
+ 
+- **Troubleshooting:** 
+- 스테이지 전환 시의 메모리 부하를 줄이기 위해 어드레서블(Addressables)을 활용한 리소스 로드 최적화
+- 기존 시스템에서 하드 모드와 이벤트 스테이지가 추가됨에 따라 데이터 구조가 복잡해지는 문제가 발생.
+이를 해결하기 위해 각 모드를 Data Layer에서 분리하고, partial 키워드를 통해 class를 나누고 데이터 오염 방지와 유지보수 편의성을 동시에 확보.
 
 ---
 > **"복잡한 로직을 단순하고 견고하게 설계하는 것을 즐깁니다. 유저에게 즐거운 경험을 주기 위해 끊임없이 고민하는 클라이언트 개발자가 되겠습니다."**
