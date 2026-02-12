@@ -4,7 +4,7 @@
 ---
 
 ## 📌 Project Overview
-- **개발 기간:** 2022.11 ~ 2022.02
+- **개발 기간:** 2022.11 ~ 2026.02
 - **기술 스택:** Unity 3D, C#, UGUI
 - **담당 역할:** 클라이언트 컨텐츠 로직 구현 (스테이지, 시스템, 미니게임, 덱, 빙고게임)
 
@@ -92,6 +92,19 @@
 </p>
 
 - **Troubleshooting:** 다양한 아이템 연출이 겹칠 때 프레임 드랍이 발생하는 문제를 방지하기 위해, 이펙트 오브젝트에도 오브젝트 풀링을 적용하여 안정적인 성능을 유지.
+
+### 4️⃣ 프로필 및 프레임 시스템 (Profile & Frame System)
+유저의 개성을 표현하는 프로필 사진과 프레임 선택 시스템을 구축하고, 획득 조건에 따른 활성화 로직을 구현했습니다.
+- **주요 구현:**
+    - 수백 종류의 프로필 리소스를 시트 데이터와 연동하여 코드 수정 없이 리소스를 추가/관리할 수 있는 구조 설계.
+    - **상태별 필터링 로직:** '보유 중', '미보유', '장착 중' 상태를 구분하고, 미보유 아이템의 경우 획득 처 확인 가능 팝업 연동.
+    - **동적 리소스 로딩:** 메모리 효율을 위해 모든 프레임을 상주시키지 않고, 필요한 시점에만 Addressables 또는 Resources를 통해 로드하는 최적화 적용.
+
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/cd324a3e-1f37-4776-8cfe-ad08097f4178" width="20%" alt="Profile Image">
+  <img src="https://github.com/user-attachments/assets/007dcec3-47ee-4a71-9f11-576af00d73dc" width="20%" alt="Profile Frame">
+</p>
+
 ---
 
 ## 💻 Code Snippets
