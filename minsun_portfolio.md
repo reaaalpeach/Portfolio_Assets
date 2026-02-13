@@ -8,16 +8,21 @@
 ## 🎮 Project 1: NCT ZONE
 > **NCT 멤버들과 함께하는 시네마틱 어드벤처 게임의 핵심 시스템 개발 및 라이브 서비스 개발/유지 보수**
 
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/3fffa844-a235-4d50-b18a-db2b56d28fde" width="20%" alt="Icon">
+  <img src="https://github.com/user-attachments/assets/03074ce6-78da-4dc3-8843-da0f0fab0dd7" width="20%" alt="NCT ZONE Main">
+</p>
+
 ### 📌 Project Overview
-- **개발 기간:** 2022.11 ~ 2026.02
-- **기술 스택:** Unity 3D, C#, UGUI
-- **담당 역할:** 클라이언트 컨텐츠 로직 구현 (스테이지, 시스템, 미니게임, 덱, 빙고게임)
+- **개발 기간 :** 2022.11 ~ 2026.02
+- **기술 스택 :** Unity 3D, C#, UGUI
+- **담당 역할 :** 클라이언트 컨텐츠 로직 구현 (스테이지, 시스템, 미니게임, 덱, 빙고게임)
 
 ### ✨ Key Implementation
 
 #### 1️⃣ 스테이지 & 챕터 시스템 (Stage & Chapter)
 다양한 게임 모드(Normal, Hard, Event)에 대응하기 위해 확장성 있는 데이터 구조를 설계하고 관리 시스템을 구현했습니다.
-- **주요 구현:** 
+- **주요 구현 :** 
     - 챕터 간 이동 및 해금 조건 체크 시스템 구현
     - 모드별 데이터 격리 구조: Enum 타입을 활용한 스테이지 카테고리 분류 및 모드별 독립적 데이터 테이블 관리로 데이터 혼선 방지.
     - 이벤트 스테이지 제어: 기간 한정 컨텐츠를 위해 서버 시간과 연동된 활성화/비활성화 스케줄링 로직 구현.
@@ -36,7 +41,7 @@
 
 #### 2️⃣ 덱 저장 시스템 (Deck Management)
 유저가 스테이지 공략을 위해 설정한 최적의 카드 조합을 로컬 및 서버에 저장하고 불러오는 기능을 구현했습니다.
-- **주요 구현:**
+- **주요 구현 :**
     - 다중 덱 슬롯 관리 로직
     - 보스별 속성 상성과 카드의 상성에 따른 빠른 편성 기능 추가 
 
@@ -50,10 +55,10 @@
 
 #### 3️⃣ 빙고 이벤트 시스템 (Bingo System)
 미션 수행과 재화 소모를 결합하여 유저의 리텐션을 유도하는 이벤트 시스템을 개발했습니다.
-- **주요 구현:**
-    - **이원화 도장 시스템:** 미션 보상(일반 도장)과 유료 재화(스페셜 도장) 사용 로직 구현
-    - **빙고 판정 알고리즘:** 5x5 그리드의 가로, 세로, 대각선 완성 여부를 실시간 검출
-    - **최종 보상 연동:** 올빙고 달성 시 '미공개 사진' 뷰어 및 해금 연출 구현
+- **주요 구현 :**
+    - **이원화 도장 시스템 :** 미션 보상(일반 도장)과 유료 재화(스페셜 도장) 사용 로직 구현
+    - **빙고 판정 알고리즘 :** 5x5 그리드의 가로, 세로, 대각선 완성 여부를 실시간 검출
+    - **최종 보상 연동 :** 올빙고 달성 시 '미공개 사진' 뷰어 및 해금 연출 구현
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/b81fe47f-739d-4c25-977c-e8ad123d71a8" width="20%" alt="Bingo">
@@ -98,10 +103,10 @@
 
 #### 4️⃣ 프로필 및 프레임 시스템 (Profile & Frame System)
 유저의 개성을 표현하는 프로필 사진과 프레임 선택 시스템을 구축하고, 획득 조건에 따른 활성화 로직을 구현했습니다.
-- **주요 구현:**
+- **주요 구현 :**
     - 수백 종류의 프로필 리소스를 시트 데이터와 연동하여 코드 수정 없이 리소스를 추가/관리할 수 있는 구조 설계.
-    - **상태별 필터링 로직:** '보유 중', '미보유', '장착 중' 상태를 구분하고, 미보유 아이템의 경우 획득 처 확인 가능 팝업 연동.
-    - **동적 리소스 로딩:** 메모리 효율을 위해 모든 프레임을 상주시키지 않고, 필요한 시점에만 Addressables 또는 Resources를 통해 로드하는 최적화 적용.
+    - **상태별 필터링 로직 :** '보유 중', '미보유', '장착 중' 상태를 구분하고, 미보유 아이템의 경우 획득 처 확인 가능 팝업 연동.
+    - **동적 리소스 로딩 :** 메모리 효율을 위해 모든 프레임을 상주시키지 않고, 필요한 시점에만 Addressables 또는 Resources를 통해 로드하는 최적화 적용.
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/cd324a3e-1f37-4776-8cfe-ad08097f4178" width="20%" alt="Profile Image">
@@ -791,9 +796,9 @@
 ---
 
 ## 📈 Growth & Review
-- **데이터 설계 능력 향상:** Normal/Hard/Event 등 복잡한 라이브 서비스 환경에서 데이터 간섭 없이 안정적으로 확장 가능한 시스템 설계 역량을 쌓았습니다.
-- **최적화 및 UX 고려:** 대량의 랭킹 데이터 처리 및 오브젝트 풀링을 활용한 미니게임 구현을 통해 성능 최적화와 유저 피드백(연출)의 중요성을 체득했습니다.
-- **협업 중심 개발:** 기획 의도에 유연하게 대응할 수 있도록 추상화와 인터페이스 중심의 코드를 작성하여 유지보수 효율을 높였습니다.
+- **데이터 설계 능력 향상 :** Normal/Hard/Event 등 복잡한 라이브 서비스 환경에서 데이터 간섭 없이 안정적으로 확장 가능한 시스템 설계 역량을 쌓았습니다.
+- **최적화 및 UX 고려 :** 대량의 랭킹 데이터 처리 및 오브젝트 풀링을 활용한 미니게임 구현을 통해 성능 최적화와 유저 피드백(연출)의 중요성을 체득했습니다.
+- **협업 중심 개발 :** 기획 의도에 유연하게 대응할 수 있도록 추상화와 인터페이스 중심의 코드를 작성하여 유지보수 효율을 높였습니다.
 
 ---
 ## 🎮 Project 2: Project V 
@@ -805,9 +810,9 @@
 </p>
 
 ## 📌 Project Overview
-- **개발 기간:** 2025.10 ~ 2026.02
-- **기술 스택:** Unity 3D, C#, UGUI
-- **담당 역할:** 클라이언트 컨텐츠 로직 구현 (SNS)
+- **개발 기간 :** 2025.10 ~ 2026.02
+- **기술 스택 :** Unity 3D, C#, UGUI
+- **담당 역할 :** 클라이언트 컨텐츠 로직 구현 (SNS)
     
 ### ✨ Key Implementation
 
@@ -817,21 +822,26 @@
 #### 1️⃣ 피드 업로드 및 실시간 댓글 시스템 (Feed & Comment) 📤
 유저가 직접 미디어를 공유하고 의견을 나눌 수 있는 커뮤니티 핵심 기능을 구현
 
-- **미디어 업로드 로직:** 테이블 데이터 기반하여 이미지를 로드하고 이미지 선택과 함께 글을 작성하여 서버 전송 적용
-- **실시간 댓글 동기화:** 댓글 작성 시 리스트 자동 갱신 및 레이아웃 동적으로 높이 조절(Dynamic Layout) 처리
-- **낙관적 업데이트 (Optimistic UI):** 좋아요 및 댓글 등록 시 서버 응답 전 UI를 즉시 반영하여 사용자 체감 속도 극대화
+- **주요 구현 :** 
+  - **미디어 업로드 로직 :** 테이블 데이터 기반하여 이미지를 로드하고 이미지 선택과 함께 글을 작성하여 서버 전송 적용
+  - **실시간 댓글 동기화 :** 댓글 작성 시 리스트 자동 갱신 및 레이아웃 동적으로 높이 조절(Dynamic Layout) 처리
+  - 좋아요 및 댓글 등록 시 서버 응답 전 UI를 즉시 반영하여 사용자 체감 속도 극대화
     
 <p align="left">
   <img src="https://github.com/user-attachments/assets/f91e191f-89fe-471f-aeee-d81b78cc6921" width="20%" alt="Feed Main">
   <img src="https://github.com/user-attachments/assets/5cace5de-6352-4547-a5c2-59b6af57eb59" width="20%" alt="Feed Replying">
   <img src="https://github.com/user-attachments/assets/e21cca3f-3b8f-462a-925d-d07d64c1078e" width="20%" alt="Feed Upload">
 </p>
+  
+- **Troubleshooting:** 
+- 피드 콘텐츠의 높이가 가변적임에 따라, 각 게시물의 레이아웃이 고정되지 않아 컴포넌트 간 중첩 현상이 발생. 이를 해결하기 위해, 각 피드를 구성하는 하위 요소들의 높이를 실시간으로 연산하고, 가변적인 댓글 영역의 높이까지 합산하여 전체 피드의 레이아웃 사이즈를 동적으로 재설정함으로써 레이아웃 중첩 문제를 해결.
     
 #### 2️⃣ 실시간 소셜 상호작용 (Social Interaction) ❤️
 좋아요, 댓글 등 유저 간 실시간 인터랙션을 위한 반응형 UI 시스템을 개발
 
-- **낙관적 업데이트 (Optimistic UI):** 서버 응답 대기 없이 유저 액션에 즉각 반응하는 UI 로직을 적용하여 체감 속도 향상
-- **이벤트 버스(Event Bus):** 게시물의 상태 변경(좋아요 수 등)이 여러 UI 뷰에 동시 반영되도록 옵저버 패턴 적용
+- **주요 구현 :** 
+  - 서버 응답 대기 없이 유저 액션에 즉각 반응하는 UI 로직을 적용하여 체감 속도 향상
+  - 게시물의 상태 변경(좋아요 수 등)이 여러 UI 뷰에 동시 반영되도록 옵저버 패턴 적용
     
 <p align="left">
   <img src="https://github.com/user-attachments/assets/a3ae732c-a8c6-4108-b21a-d217ff8141c1" width="20%" alt="Feed Like">
@@ -841,8 +851,9 @@
 #### 3️⃣ 스토리 시스템 (Story System) ⏱️
 24시간 동안 유지되는 휘발성 콘텐츠를 위한 별도의 뷰어와 업로드 로직을 구현
 
-- **스토리 전용 뷰어:** 상단 프로그레스 바(Progress Bar) 연동 및 자동 넘김, 탭 이동 기능 구현
-- **필터링 로직:** 서버 시간을 기준으로 24시간 이내의 유효한 데이터만 필터링하여 노출하는 클라이언트 로직 설계
+- **주요 구현 :** 
+  - **스토리 전용 뷰어 :** 상단 프로그레스 바(Progress Bar) 연동 및 자동 넘김, 탭 이동 기능 구현
+  - **필터링 로직 :** 서버 데이터 기반으로 남은 유효시간을 계산해 실시간 만료 카운트다운을 수행하여, 유효 시간이 경과한 데이터는 자동으로 필터링해 노출되지 않도록 구현
     
 <p align="left">
   <img src="https://github.com/user-attachments/assets/3740c587-d807-4d86-81e0-c935877a883d" width="20%" alt="Story">
@@ -850,21 +861,239 @@
 </p>
 
 #### 4️⃣ 실시간 DM 시스템 (Direct Message) 💬
-유저 간 1:1 채팅을 위한 메시지 송수신 시스템을 구축\
-
-- **실시간 통신:** Socket 또는 Firebase Realtime Database를 활용한 저지연 메시지 송수신 구현
-- **채팅 UI 최적화:** 가변형 말풍선 리스트 구현
-- **상태 표시:** 메시지 읽음 처리(Read Receipt) 및 실시간 글쓰기 상태 표시 로직 연동
+유저와 캐릭터 간 1:1 채팅을 위한 메시지 송수신 시스템을 구축
+- **주요 구현 :** 
+  - **실시간 통신 :** 서버- AI간 데이터를 실시간 이벤트 기반으로 중계하여 대화 내용이 즉시 화면에 반영되는 대화형 인터페이스 구축
+  - **채팅 UI 최적화 :** 가변형 말풍선 리스트 구현
+  - **상태 표시 :** 지연 메세지, 메시지 읽음 처리(Read Receipt) 및 실시간 글쓰기 상태 표시 로직 연동
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/d374e585-153a-4022-8083-3832dace2e4a" width="20%" alt="DM List">
   <img src="https://github.com/user-attachments/assets/079fd7be-f06e-4436-b941-445566ce8b77" width="20%" alt="DM">
 </p>
- 
-- **Troubleshooting:** 
-- 스테이지 전환 시의 메모리 부하를 줄이기 위해 어드레서블(Addressables)을 활용한 리소스 로드 최적화
-- 기존 시스템에서 하드 모드와 이벤트 스테이지가 추가됨에 따라 데이터 구조가 복잡해지는 문제가 발생.
-이를 해결하기 위해 각 모드를 Data Layer에서 분리하고, partial 키워드를 통해 class를 나누고 데이터 오염 방지와 유지보수 편의성을 동시에 확보.
 
 ---
+
+## 💻 Code Snippets
+
+### [Feed System]
+
+<details> <summary><b>1️⃣ 피드 레이아웃 재조정</b></summary>
+  
+    private void RefreshRootUIHeight()
+    {
+        Canvas.ForceUpdateCanvases();
+
+        float childrenHeight = 0f;
+        foreach (var child in rectList)
+        {
+            childrenHeight += child.rect.height;
+        }
+        childrenHeight += replySpacing; // 댓글 제외한 전체 높이 + 보정값
+
+        replyParentRect.anchoredPosition = new Vector2(replyParentRect.anchoredPosition.x, childrenHeight * -1); // 댓글 위치 조정
+
+        var replyHeight = feedData.reply_cnt > 0 ? replyParentRect.rect.height : 0;
+        var sizeDelta = rootUI.sizeDelta;
+        sizeDelta.y = childrenHeight + replyHeight; // 전체 사이즈 조정
+        rootUI.sizeDelta = sizeDelta;
+    }
+  
+</details>
+
+### [Story System]
+
+<details> <summary><b>1️⃣ 스토리 및 상단 프로그레스 바 셋팅</b></summary>
+  
+  public class PopupSnsStory : CPopupUI<PopupSnsStory.Setting, PopupSnsStory.Result>
+  {
+       private List<ObjSnsStory> objStoryList = new List<ObjSnsStory>(50); // 재사용을 위한 story obj 리스트
+       private List<ObjSnsStorySlider> objSliderList = new List<ObjSnsStorySlider>(50); // 재사용을 위한 slider obj 리스트
+  
+       private void SetStoryInfo(bool isNext)
+        {
+            objStoryList?.Clear();
+
+            storyList = objStoryData.storyList;
+
+            for (int i = 0; i < storyList.Count; i++)
+            {
+                var story = storyList[i];
+                var prefabData = CSNSDataManager.Instance.GetStoryPrefabData(story.prefab_id);
+                if (prefabData != null)
+                {
+                    var storyObj = Instantiate(templateObj[prefabData.storyprfb_type], storyHolder);
+                    if(storyObj != null)
+                    {
+                        var objSnsStory = storyObj.GetComponent<ObjSnsStory>();
+                        if (objSnsStory != null)
+                        {
+                            objSnsStory.Init(storyList[i], i, this);
+                            objStoryList.Add(objSnsStory);
+                        }
+                    }
+
+                    if(objSliderList.Count < objStoryList.Count) // slider가 story갯수보다 적으면 생성
+                    {
+                        var slider = Instantiate(sliderObj, sliderHolder);
+                        if (slider != null)
+                        {
+                            slider.gameObject.SetActive(true);
+                            var objSnsStorySlider = slider.GetComponent<ObjSnsStorySlider>();
+                            if (objSnsStorySlider != null)
+                            {
+                                objSnsStorySlider.Init(this);
+                                objSliderList.Add(objSnsStorySlider);
+                            }
+                        }
+                    }
+                }
+            }
+
+            if(objStoryList.Count > 0)
+            {
+                SetActiveSlider(true); // 스토리갯수만큼 슬라이더 켜기
+
+                storyIdxMax = storyList.Count - 1;
+                if (isNext)
+                {
+                    SetCurStoryIdx(0);
+                    SetSliderMin();
+                }
+                else
+                {
+                    SetCurStoryIdx(storyIdxMax); // 이전스토리는 맨 마지막 스토리부터 시작
+                    SetSliderMax();
+                }    
+
+                SetSibilingStory(true, true);
+            }
+        }
+  }
+    
+</details>
+  
+<details> <summary><b>2️⃣ 다음 데이터 셋팅 </b></summary>
+  
+  public class PopupSnsStory : CPopupUI<PopupSnsStory.Setting, PopupSnsStory.Result>
+  {
+      private bool CheckSibilingData(bool isNext) // 다음 캐릭터의 스토리가 있는지 체크
+      {
+          int curIdx = index;
+          var silibingIdx = isNext ? ++curIdx : --curIdx;
+
+          var objectStoryDataList = APIHelper.SnsService.GetStoryData();
+          var siblingData = silibingIdx >= 0 && silibingIdx < objectStoryDataList.Count ? objectStoryDataList[silibingIdx] : null;
+
+          if (siblingData != null)
+          {
+              objStoryData = siblingData;
+              return true;
+          }
+
+          return false;
+      }
+    
+      public void OnClickLeft() // 왼쪽으로 넘기기
+      {
+          SetCurStoryIdx(--curStoryIdx);
+          if(curStoryIdx < 0)
+          {
+              if (CheckSibilingData(false))
+                  SetSibilingObjectData(false);
+              else
+              {
+                  SetCurStoryIdx(0);
+                  SetSibilingStory(false);
+              }
+          }
+          else
+              SetSibilingStory(false);
+      }
+                             
+      private void SetSibilingStory(bool isRight, bool isInit = false, bool isCheckExpired = false) // 다음 스토리 및 슬라이더 셋팅
+      {
+          if(!isCheckExpired)
+          {
+              if (!isInit && storyIdxMax > 0)
+              {
+                  var preIdx = isRight ? curStoryIdx - 1 : curStoryIdx + 1;
+
+                  objStoryList[preIdx].gameObject.SetActive(false);
+                  objSliderList[preIdx].SetTimeSliderValue(isRight);
+              }
+          }
+
+          objStoryList[curStoryIdx].gameObject.SetActive(true);
+          objStoryList[curStoryIdx].SetStoryInfo();
+
+          objSliderList[curStoryIdx].StartTimeSlider();
+      }
+  }
+  
+</details>
+  
+<details> <summary><b>3️⃣ 시간 만료 체크 </b></summary>
+  
+  public class PopupSnsStory : CPopupUI<PopupSnsStory.Setting, PopupSnsStory.Result>
+  {                                                                             
+      public void RemoveExpiredStory() // 시간 만료된 스토리 삭제
+      {
+          isDataDeleted = true;
+
+          SetReadCheck(curStoryData.gdid, false); 
+          objStoryData.storyList.RemoveAt(curStoryIdx);
+          objStoryList[curStoryIdx].gameObject.SetActive(false);
+          objSliderList.FindLast(x => x.gameObject.activeSelf).gameObject.SetActive(false); // 활성화O && 맨끝에 있는 슬라이더를 꺼야함
+
+          var newObjStoryList = new List<ObjSnsStory>(); // 스토리오브젝트 재구성
+          for (int i = 0; i < objStoryList.Count; ++i)
+          {
+              if (i != curStoryIdx)
+                  newObjStoryList.Add(objStoryList[i]);
+              else
+                  objStoryList[i].gameObject.Destroy();
+          }
+
+          storyList = objStoryData.storyList;
+          objStoryList = newObjStoryList;
+
+          storyIdxMax = storyList.Count - 1;
+
+          if(storyIdxMax < 0)
+          {
+              APIHelper.SnsService.CheckStoryListNone(); // 스토리 남았는지 체크 후, 데이터 갱신
+              SNSManager.Instance.PageSNS.SetStory();
+              --index;
+          }
+
+          for (int i = 0; i < newObjStoryList.Count; ++i)
+          {
+              objStoryList[i].RefreshData(storyList[i], i);
+          }
+
+          SetCurStoryIdx(curStoryIdx);
+          if(curStoryIdx > storyIdxMax) // 왼 -> 오
+          {
+              if (CheckSibilingData(true))
+                  SetSibilingObjectData(true);
+              else
+              {
+                  CCoreServices.GetCoreService<CPopupService>().NoticeMessageDisposable("STORY_toast_nostorytoplay");
+                  OnClickClose();
+              }
+              return;
+          }
+
+          SetSibilingStory(true, false, true);
+
+          isDataDeleted = false;
+          isTestCompleted = false;
+      }
+  }
+    
+</details>
+
+---
+ 
 > **"복잡한 로직을 단순하고 견고하게 설계하는 것을 즐깁니다. 유저에게 즐거운 경험을 주기 위해 끊임없이 고민하는 클라이언트 개발자가 되겠습니다."**
