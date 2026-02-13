@@ -5,6 +5,8 @@
 1. [NCT ZONE - 콘텐츠 및 시스템 개발](#-project-1-nct-zone)
 2. [Project V](#-project-2-project-v)
 
+---
+
 ## 🎮 Project 1: NCT ZONE
 > **NCT 멤버들과 함께하는 시네마틱 어드벤처 게임의 핵심 시스템 개발 및 라이브 서비스 개발/유지 보수**
 
@@ -24,9 +26,9 @@
 다양한 게임 모드(Normal, Hard, Event)에 대응하기 위해 확장성 있는 데이터 구조를 설계하고 관리 시스템을 구현했습니다.
 - **주요 구현 :** 
     - 챕터 간 이동 및 해금 조건 체크 시스템 구현
-    - 모드별 데이터 격리 구조: Enum 타입을 활용한 스테이지 카테고리 분류 및 모드별 독립적 데이터 테이블 관리로 데이터 혼선 방지.
-    - 이벤트 스테이지 제어: 기간 한정 컨텐츠를 위해 서버 시간과 연동된 활성화/비활성화 스케줄링 로직 구현.
-    - 추상화 기반 설계: 각 모드가 동일한 인터페이스를 공유하되, 보상 산정 및 난이도 계산 로직은 각 모드에 맞게 동작하도록 설계.
+    - **모드별 데이터 격리 구조 :** Enum 타입을 활용한 스테이지 카테고리 분류 및 모드별 독립적 데이터 테이블 관리로 데이터 혼선 방지.
+    - **이벤트 스테이지 제어 :** 기간 한정 컨텐츠를 위해 서버 시간과 연동된 활성화/비활성화 스케줄링 로직 구현.
+    - **추상화 기반 설계 :** 각 모드가 동일한 인터페이스를 공유하되, 보상 산정 및 난이도 계산 로직은 각 모드에 맞게 동작하도록 설계.
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/6006a790-1e9b-4d6b-b1ee-1a1308b93348" width="20%" alt="Stage System">
@@ -92,8 +94,8 @@
 </p>
 
 ##### 미니게임 공통 적용 사항
-- 아이템 시스템 : 각기 다른 효과(턴 추가, 통흔들기, 지정해서 없애기 등)를 가진 아이템을 고유 트리거 시스템을 통해 사용 즉시 연동되는 특수 효과 및 로직을 구현하고, 게임의 템포를 조절하는 다양한 변수 창출.
-- 랭킹 시스템 : 전체 유저 대상의 '글로벌 랭킹'과 소셜 연동 정보를 활용한 '친구 랭킹' 데이터 분리 및 UI 대응.
+- **아이템 시스템 :** 각기 다른 효과(턴 추가, 통흔들기, 지정해서 없애기 등)를 가진 아이템을 고유 트리거 시스템을 통해 사용 즉시 연동되는 특수 효과 및 로직을 구현하고, 게임의 템포를 조절하는 다양한 변수 창출.
+- **랭킹 시스템 :** 전체 유저 대상의 '글로벌 랭킹'과 소셜 연동 정보를 활용한 '친구 랭킹' 데이터 분리 및 UI 대응.
 
 <p align="left">
   <img src="https://github.com/user-attachments/assets/8b2d59ba-cf36-4f75-9f5d-71909796d7fa" width="20%" alt="MiniGame Ranking System">
@@ -113,7 +115,6 @@
   <img src="https://github.com/user-attachments/assets/007dcec3-47ee-4a71-9f11-576af00d73dc" width="20%" alt="Profile Frame">
 </p>
 
----
 
 ## 💻 Code Snippets
 
@@ -871,8 +872,6 @@
   <img src="https://github.com/user-attachments/assets/d374e585-153a-4022-8083-3832dace2e4a" width="20%" alt="DM List">
   <img src="https://github.com/user-attachments/assets/079fd7be-f06e-4436-b941-445566ce8b77" width="20%" alt="DM">
 </p>
-
----
 
 ## 💻 Code Snippets
 
